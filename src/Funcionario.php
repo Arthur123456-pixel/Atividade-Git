@@ -4,11 +4,13 @@ class Funcionario
 {
     private int $id;
     private string $nome;
+    private string $cargo;
 
-    public function __construct(int $id, string $nome)
+    public function __construct(int $id, string $nome, string $cargo)
     {
         $this->id = $id;
         $this->nome = $nome;
+        $this->cargo = $cargo;
     }
 
     public function getId(): int
@@ -29,5 +31,15 @@ class Funcionario
     public function setNome(string $nome): void
     {
         $this->nome = $nome;
+    }
+
+    public function getCargo(): string
+    {
+        return $this->cargo;
+    }
+
+    public function setCargo(string $cargo): void
+    {
+        $this->cargo = $cargo;
     }
 }
